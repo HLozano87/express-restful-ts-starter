@@ -11,13 +11,12 @@ app.use(cors());
 
 app.use(logger('dev'));
 
-
 // Not found
 app.use((req: Request, res: Response, next: NextFunction) => {
-  if (!req.url.startsWith('/api/')) {
+  if (!req.url.startsWith('/api')) {
     return res.status(404).send('Not found');
   }
-  next(createError(404, "API route not found"));
+  next(createError(404, 'API route not found'));
 });
 
 // Error Handler
