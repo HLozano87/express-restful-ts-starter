@@ -1,6 +1,6 @@
-import "dotenv/config";
-import http from "node:http";
-import app from "./app";
+import 'dotenv/config';
+import http from 'node:http';
+import app from './app';
 
 const PORT = process.env.PORT || 3000;
 const SERVER = http.createServer(app);
